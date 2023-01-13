@@ -9,7 +9,7 @@ yedek=''
 sayac=0
 Boz=True
 while Boz:
-    im1=pyautogui.screenshot(region=(446,240, 975,85))  #10fastfinger sitesindeki yazıların olduğu pixelerin kordinatlarını ekran görüntüsü alıyoruz
+    im1=pyautogui.screenshot(region=(446,240, 975,85))  #10fastfinger sitesindeki yazıların bulunduğu kordinatı ekran görüntüsü alıyoruz
     im1.save("C:\\Users\\....")  #Aldığımız ekran görüntüsünü hangi dizine kayıt edeceğimizi seçiyoruz
     screenshot="C:\\Users\\...." #Aldığımız ekran görüntüsünün yolunu bir değişkene atıyoruz üsteki ile aynı olmalı
     tes.pytesseract.tesseract_cmd="C:\\Users\\kullaniciadin\\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe" #tesseract.exe'nin bulunduğu dizini belirtiyoruz
