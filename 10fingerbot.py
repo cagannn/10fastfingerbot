@@ -8,11 +8,13 @@ kelime=" "
 yedek=''
 sayac=0
 Boz=True
+screenshot_loc=input("Ekran görüntüsünün nereye kaydedileceğini giriniz(\\'ları 2 kere yazın): ")#Alacağımız ekran görüntüsünün hangi dizine kayıt edeceğimizi giriyoru.
+tesseract_loc=input("tesseract.exe'nin konumunu giriniz(\\'ları 2 kere yazın): ")#tesseract.exe'nin bulunduğu dizini yazıyoruz.
 while Boz:
     im1=pyautogui.screenshot(region=(446,240, 975,85))  #10fastfinger sitesindeki yazıların bulunduğu kordinatı ekran görüntüsü alıyoruz
-    im1.save("C:\\Users\\....")  #Aldığımız ekran görüntüsünü hangi dizine kayıt edeceğimizi seçiyoruz
-    screenshot="C:\\Users\\...." #Aldığımız ekran görüntüsünün yolunu bir değişkene atıyoruz üsteki ile aynı olmalı
-    tes.pytesseract.tesseract_cmd="C:\\Users\\kullaniciadin\\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe" #tesseract.exe'nin bulunduğu dizini belirtiyoruz
+    im1.save(screenshot_loc)  
+    screenshot=screenshot_loc #Aldığımız ekran görüntüsünün yolunu bir değişkene atıyoruz üsteki ile aynı olmalı
+    tes.pytesseract.tesseract_cmd=tesseract_loc #tesseract.exe'nin bulunduğu dizini belirtiyoruz
     resim=cv2.imread(screenshot)       #Opencv ile ekran görüntüsünü değişkene atıyoruz
     metin=tes.image_to_string(resim)   #Tesseract kütüphanesi ile çekilen ekran görüntüsünüdeki yazıları stringe çeviriyoruz
     tm.sleep(0.5)                      
